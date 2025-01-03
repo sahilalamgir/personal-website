@@ -10,13 +10,11 @@ export const Newsletter = ({onValidated, status, message}) => {
     }
   }, [status]);
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     e.preventDefault()
-    email &&
-    email.indexOf("@") > -1 &&
-    onValidated({
-      EMAIL: email
-    })
+    if (email && email.indexOf("@") > -1) {
+      onValidated({ EMAIL: email })
+    }
   }
 
   const clearFields = () => {
@@ -36,7 +34,7 @@ export const Newsletter = ({onValidated, status, message}) => {
           <Col md={6} xl={7}>
             <form onSubmit={handleSubmit}>
               <div className="new-email-bx">
-                <input value={email} type="email" onChange={e => setEmail(e.target.value)} placeholder="Enter email address" />
+                <input value={email} type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email address" />
                 <button type="submit">Submit</button>
               </div>
             </form>
