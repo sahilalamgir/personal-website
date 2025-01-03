@@ -617,6 +617,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 85px 125px;
   margin-bottom: 80px;
   margin-top: -122px;
+  justify-content: center;
 }
 
 .newsletter h3 {
