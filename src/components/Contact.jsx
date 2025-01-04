@@ -26,7 +26,7 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
 
-    const postURL = import.meta.env.DEPLOYMENT_URL || "http://localhost:5000"
+    const postURL = import.meta.env.VITE_DEPLOYMENT_URL || "http://localhost:5000"
 
     let response = await fetch(`${postURL}/contact`, {
       method: "POST",
