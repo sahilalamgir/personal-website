@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import nodemailer from "nodemailer";
+import path from "path";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -10,9 +11,20 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.listen(5000, () => console.log("Server Running"));
-console.log(process.env.EMAIL_USER);
-console.log(process.env.EMAIL_PASS);
+// Serve React build files
+const __dirname = path.resolve(); // Use current directory
+app.use(express.static(path.join(__dirname, "dist"))); // Serve the dist folder
+
+// Fallback for React routing
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
+
+const PORT = process.env.PORT || 5000
+
+app.listen(PORT, () => console.log("Server Running"));
+// console.log(process.env.EMAIL_USER);
+// console.log(process.env.EMAIL_PASS);
 
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
