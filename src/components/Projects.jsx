@@ -1,8 +1,9 @@
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import alzguardimg from "../assets/img/alzguardimg.webp";
+import spotifyimg from "../assets/img/spotifyimg.png";
+import blogimg from "../assets/img/blogimg.png";
+import retailimg from "../assets/img/retailimg.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -12,17 +13,17 @@ export const Projects = () => {
     {
       title: "Mood-Based Spotify Playlist Generator",
       description: "Built a full-stack app where users can enter any prompt and the app will generate a Spotify personalized playlist.",
-      imgUrl: projImg1,
+      imgUrl: spotifyimg,
     },
     {
       title: "AlzGuard",
       description: "Collaborated in a team of 3 to build an AI Alzheimer's detection tool by using a CNN to scan MRI images and determine the likelihood of Alzheimer's.",
-      imgUrl: projImg2,
+      imgUrl: alzguardimg,
     },
     {
       title: "Retail Weekly Sales Prediction",
       description: "Trained an XGBoost regression model to predict weekly sales of various stores based on features like department and markdowns from Kaggle dataset.",
-      imgUrl: projImg3,
+      imgUrl: retailimg,
     },
   ]
 
@@ -30,17 +31,17 @@ export const Projects = () => {
     {
       title: "Mood-Based Spotify Playlist Generator",
       description: "Built a full-stack app where users can enter any prompt and the app will generate a Spotify personalized playlist.",
-      imgUrl: projImg1,
+      imgUrl: spotifyimg,
     },
     {
       title: "AlzGuard",
       description: "Collaborated in a team of 3 to build an AI Alzheimer's detection tool by using a CNN to scan MRI images and determine the likelihood of Alzheimer's.",
-      imgUrl: projImg2,
+      imgUrl: alzguardimg,
     },
     {
       title: "Blog App",
       description: "Created full-stack blog application with simulated multi-user environment with blog posting and commenting features.",
-      imgUrl: projImg3,
+      imgUrl: blogimg,
     },
   ]
 
