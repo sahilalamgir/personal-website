@@ -52,7 +52,7 @@ export const Banner = () => {
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>{`Hi I'm Sahil, a `}<br></br><span className="wrap">{text}</span></h1>
-                  <p>Loren ipsum is simply dummy text of the printing and typesetting industry. Loren ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  <p>I am a CS/BBA student from the University of Waterloo and Wilfrid Laurier University. Check out my skills and projects below!</p>
                   <button onClick={() => console.log("Connect")}>Let's connect <ArrowRightCircle size={25}/></button>
                 </div>
               }
