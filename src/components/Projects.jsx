@@ -8,35 +8,38 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
-  const projects = [
+  const ds_projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Mood-Based Spotify Playlist Generator",
+      description: "Built a full-stack app where users can enter any prompt and the app will generate a Spotify personalized playlist.",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "AlzGuard",
+      description: "Collaborated in a team of 3 to build an AI Alzheimer's detection tool by using a CNN to scan MRI images and determine the likelihood of Alzheimer's.",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Retail Weekly Sales Prediction",
+      description: "Trained an XGBoost regression model to predict weekly sales of various stores based on features like department and markdowns from Kaggle dataset.",
       imgUrl: projImg3,
     },
+  ]
+
+  const fs_projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Mood-Based Spotify Playlist Generator",
+      description: "Built a full-stack app where users can enter any prompt and the app will generate a Spotify personalized playlist.",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "AlzGuard",
+      description: "Collaborated in a team of 3 to build an AI Alzheimer's detection tool by using a CNN to scan MRI images and determine the likelihood of Alzheimer's.",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Blog App",
+      description: "Created full-stack blog application with simulated multi-user environment with blog posting and commenting features.",
       imgUrl: projImg3,
     },
   ]
@@ -50,26 +53,26 @@ export const Projects = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__lightSpeedInRight" : ""}>
                   <h2>Projects</h2>
-                  <p>Lorem ipsum dolor sit amet.</p>
+                  <p>I love working on projects, whether it's exploring and analyzing data, building a machine learning model, or developing a full-stack app!</p>
                   </div>
               }
             </TrackVisibility>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                 <Nav.Item>
-                  <Nav.Link eventKey="first">Tab One</Nav.Link>
+                  <Nav.Link eventKey="first">Data Science</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="second">Tab Two</Nav.Link>
+                  <Nav.Link eventKey="second">AI/ML</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="third">Tap Three</Nav.Link>
+                  <Nav.Link eventKey="third">Full-Stack</Nav.Link>
                 </Nav.Item>
               </Nav>
               <Tab.Content>
                 <Tab.Pane eventKey="first">
                   <Row>
-                    {projects.map((project, index) => {
+                    {ds_projects.map((project, index) => {
                       return (
                         <ProjectCard
                           key={index}
@@ -78,8 +81,28 @@ export const Projects = () => {
                     })}
                   </Row>
                 </Tab.Pane>
-                <Tab.Pane eventKey="second">Loren Ipsum</Tab.Pane>
-                <Tab.Pane eventKey="third">Loren Ipsum</Tab.Pane>
+                <Tab.Pane eventKey="second">
+                  <Row>
+                    {ds_projects.map((project, index) => {
+                      return (
+                        <ProjectCard
+                          key={index}
+                          {...project}/>
+                      )
+                    })}
+                  </Row>
+                </Tab.Pane>
+                <Tab.Pane eventKey="third">
+                  <Row>
+                    {fs_projects.map((project, index) => {
+                      return (
+                        <ProjectCard
+                          key={index}
+                          {...project}/>
+                      )
+                    })}
+                  </Row>
+                </Tab.Pane>
               </Tab.Content>
             </Tab.Container>
           </Col>
