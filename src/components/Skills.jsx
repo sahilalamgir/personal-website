@@ -34,23 +34,23 @@ export const Skills = () => {
             <Col>
               <div className="skill-bx">
                 <h2>Skills</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                <p>Below are some of my skills. These are subjects which I am passionate about!<br />I am always learning new things to develop my skillset.</p>
                 <Carousel responsive={responsive} infinite={true} className="skill-slider">
                   <div className="item">
                     <img src={meter1} alt="rando" />
-                    <h5>Web Development</h5>
+                    <h5>Data Science</h5>
                   </div>
                   <div className="item">
                     <img src={meter2} alt="rando" />
-                    <h5>Web cart</h5>
+                    <h5>Front-End Development</h5>
                   </div>
                   <div className="item">
                     <img src={meter3} alt="rando" />
-                    <h5>Web barti</h5>
+                    <h5>Machine Learning</h5>
                   </div>
                   <div className="item">
                     <img src={meter2} alt="rando" />
-                    <h5>Web asrti</h5>
+                    <h5>Back-End Development</h5>
                   </div>
                 </Carousel>
               </div>
