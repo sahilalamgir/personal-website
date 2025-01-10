@@ -1,9 +1,10 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import mlicon from "../assets/img/mlicon.png";
+import dsicon from "../assets/img/dsicon.png";
+import feicon from "../assets/img/feicon.png";
+import beicon from "../assets/img/beicon.png";
 import colorSharp from "../assets/img/color-sharp.png"
 
 export const Skills = () => {
@@ -37,19 +38,19 @@ export const Skills = () => {
                 <p>Below are some of my skills. These are subjects which I am passionate about!<br />I am always learning new things to develop my skillset.</p>
                 <Carousel responsive={responsive} infinite={true} className="skill-slider">
                   <div className="item">
-                    <img src={meter1} alt="rando" />
+                    <img src={dsicon} alt="rando" />
                     <h5>Data Science</h5>
                   </div>
                   <div className="item">
-                    <img src={meter2} alt="rando" />
+                    <img src={feicon} alt="rando" />
                     <h5>Front-End Development</h5>
                   </div>
                   <div className="item">
-                    <img src={meter3} alt="rando" />
+                    <img src={mlicon} alt="rando" />
                     <h5>Machine Learning</h5>
                   </div>
                   <div className="item">
-                    <img src={meter2} alt="rando" />
+                    <img src={beicon} alt="rando" />
                     <h5>Back-End Development</h5>
                   </div>
                 </Carousel>
