@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import logo from '../../salogo.svg';
+import logo from '../../salogo.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
@@ -28,7 +28,8 @@ export const NavBar = () => {
   }
 
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+    // <Container>
+          <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="#home">
             <img src={logo} alt="Logo" style={{height: 75}} />
@@ -53,5 +54,6 @@ export const NavBar = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    // </Container>
   );
 }
