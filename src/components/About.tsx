@@ -113,7 +113,7 @@ export default function About() {
 
             <div className={`${isVisible ? 'animate-fade-in-up stagger-1' : 'opacity-0'}`}>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                I'm a passionate Full Stack Developer with over 3 years of experience building 
+                I&apos;m a passionate Full Stack Developer with over 3 years of experience building 
                 modern web applications. I love turning complex problems into simple, beautiful, 
                 and intuitive solutions.
               </p>
@@ -121,7 +121,7 @@ export default function About() {
 
             <div className={`${isVisible ? 'animate-fade-in-up stagger-2' : 'opacity-0'}`}>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                When I'm not coding, you'll find me exploring new technologies, contributing to 
+                When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to 
                 open-source projects, or enjoying a good cup of coffee while brainstorming the 
                 next big idea.
               </p>

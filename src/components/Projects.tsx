@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 export default function Projects() {
   const [isVisible, setIsVisible] = useState(false);
   const [filter, setFilter] = useState('All');
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -155,7 +155,7 @@ export default function Projects() {
             </h2>
             <div className="w-20 h-1 bg-blue-600 rounded-full mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Here are some of the projects I've worked on recently. Each one represents 
+              Here are some of the projects I&apos;ve worked on recently. Each one represents 
               a unique challenge and learning experience.
             </p>
           </div>

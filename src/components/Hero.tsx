@@ -52,7 +52,7 @@ export default function Hero() {
                 <div className="absolute -bottom-2 left-0 right-0 h-1 bg-blue-600 transform scale-x-0 animate-expand"></div>
               </span>
             </h1>
-            <h2 className="text-2xl md:text-3xl font-light text-gray-700">Building the future with data & AI</h2>
+            <h2 className="text-2xl md:text-3xl font-light text-gray-700">Building the future with data &amp; AI</h2>
           </div>
         </div>
         
