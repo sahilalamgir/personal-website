@@ -17,35 +17,73 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-indigo-200 rounded-full opacity-15 animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-200 rounded-full opacity-10 animate-pulse delay-500"></div>
+      </div>
+      
+      {/* Floating particles */}
+      <div className="absolute inset-0">
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={i}
+            className={`absolute w-2 h-2 bg-blue-400 rounded-full opacity-40 animate-float`}
+            style={{
+              left: `${20 + i * 15}%`,
+              top: `${30 + (i % 2) * 40}%`,
+              animationDelay: `${i * 2}s`,
+              animationDuration: `${4 + i}s`
+            }}
+          />
+        ))}
+      </div>
+      
+      <div className="max-w-6xl mx-auto text-center relative z-10">
         <div className={`${mounted ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <h1 className="heading-responsive font-bold text-gray-900 mb-6">
-            Hi, I'm{' '}
-            <span className="text-blue-600">Sahil Alamgir</span>
-          </h1>
+          <div className="mb-6">
+            <span className="text-lg font-semibold text-blue-600 mb-4 block tracking-wider">HELLO, MY NAME IS</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-4">
+              Sahil{' '}
+              <span className="text-blue-600 relative">
+                Alamgir
+                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-blue-600 transform scale-x-0 animate-expand"></div>
+              </span>
+            </h1>
+            <h2 className="text-2xl md:text-3xl font-light text-gray-700">Building the future with data & AI</h2>
+          </div>
         </div>
         
         <div className={`${mounted ? 'animate-fade-in-up stagger-1' : 'opacity-0'}`}>
-          <p className="text-responsive text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            A passionate Full Stack Developer who loves creating modern, scalable web applications.
-            I specialize in React, Node.js, and cloud technologies, turning ideas into digital experiences.
-          </p>
+          <div className="max-w-3xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-4 font-light">
+              Passionate about <span className="text-blue-600 font-semibold">artificial intelligence</span>, 
+              <span className="text-blue-600 font-semibold"> machine learning</span>, and 
+              <span className="text-blue-600 font-semibold"> data science</span>
+            </p>
+            <p className="text-lg text-gray-500 leading-relaxed">
+              I transform complex data into intelligent solutions that solve real-world problems. 
+              From winning hackathons to building production AI systems, I love turning ideas into impact.
+            </p>
+          </div>
         </div>
 
         <div className={`${mounted ? 'animate-fade-in-up stagger-2' : 'opacity-0'}`}>
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center mb-12">
             <button
               onClick={() => scrollToSection('projects')}
-              className="btn btn-primary text-lg px-8 py-3"
+              className="group relative px-8 py-4 bg-blue-600 text-white font-bold text-lg rounded-full hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              View My Work
+              <span className="relative z-10">Explore My Work</span>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
           </div>
         </div>
 
         <div className={`${mounted ? 'animate-fade-in-up stagger-3' : 'opacity-0'}`}>
-          <div className="mt-12 flex items-center justify-center space-x-6">
+          <div className="flex items-center justify-center space-x-6">
             <a
               href="https://github.com/sahilalamgir"
               target="_blank"
@@ -73,10 +111,10 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-white shadow-soft hover:shadow-soft-lg transition-all duration-200 hover:-translate-y-1"
-              aria-label="Twitter"
+              aria-label="X (Twitter)"
             >
               <svg className="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
               </svg>
             </a>
           </div>
@@ -86,7 +124,7 @@ export default function Hero() {
         <div className={`${mounted ? 'animate-fade-in-up stagger-4' : 'opacity-0'}`}>
           <div className="mt-16 flex flex-col items-center">
             <p className="text-sm text-gray-500 mb-2">Scroll to explore</p>
-            <div className="w-0.5 h-8 bg-gradient-to-b from-blue-600 to-transparent animate-pulse"></div>
+            <div className="w-0.5 h-8 bg-blue-600 animate-pulse"></div>
           </div>
         </div>
       </div>

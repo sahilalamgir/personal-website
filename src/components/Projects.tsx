@@ -100,7 +100,7 @@ export default function Projects() {
       title: 'EchoDoc',
       subtitle: 'AI Patient Care Manager',
       description: 'Built AI healthcare platform using Next.js and ElevenLabs to automate patient calls and scheduling.',
-      image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80',
+      image: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80',
       tech: ['Next.js', 'TypeScript', 'Express.js', 'Node.js', 'PostgreSQL'],
       category: 'Full Stack',
       github: 'https://github.com/sahilalamgir/echodoc',
@@ -153,7 +153,7 @@ export default function Projects() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Featured Projects
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mx-auto mb-6"></div>
+            <div className="w-20 h-1 bg-blue-600 rounded-full mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Here are some of the projects I've worked on recently. Each one represents 
               a unique challenge and learning experience.

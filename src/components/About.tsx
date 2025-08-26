@@ -30,59 +30,65 @@ export default function About() {
   }, []);
 
   const languages = [
-    { name: 'Python', icon: '🐍' },
-    { name: 'SQL', icon: '🗄️' },
-    { name: 'JavaScript', icon: '🟨' },
-    { name: 'TypeScript', icon: '🔷' },
-    { name: 'Go', icon: '🐹' },
-    { name: 'C/C++', icon: '⚙️' },
-    { name: 'C#', icon: '🔧' },
-    { name: 'Java', icon: '☕' },
-    { name: 'R', icon: '📊' },
-    { name: 'MATLAB', icon: '📈' },
-    { name: 'HTML', icon: '🌐' },
-    { name: 'CSS', icon: '🎨' },
-    { name: 'Bash', icon: '💻' }
+    { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+    { name: 'SQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+    { name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+    { name: 'TypeScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+    { name: 'Go', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg' },
+    { name: 'C/C++', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
+    { name: 'C#', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg' },
+    { name: 'Java', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+    { name: 'R', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg' },
+    { name: 'MATLAB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg' },
+    { name: 'HTML', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+    { name: 'CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+    { name: 'Bash', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg' }
   ];
 
   const frameworks = [
-    { name: 'React', icon: '⚛️' },
-    { name: 'Next.js', icon: '▲' },
-    { name: 'Node.js', icon: '🟢' },
-    { name: 'Express.js', icon: '🚀' },
-    { name: 'Flask', icon: '🌶️' },
-    { name: 'PySpark', icon: '⚡' },
-    { name: 'LangChain', icon: '🔗' },
-    { name: 'Pandas', icon: '🐼' },
-    { name: 'Matplotlib', icon: '📊' },
-    { name: 'TensorFlow', icon: '🧠' }
+    { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+    { name: 'Next.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+    { name: 'Node.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+    { name: 'Express.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
+    { name: 'Flask', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg' },
+    { name: 'PySpark', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg' },
+    { name: 'LangChain', logo: 'https://python.langchain.com/img/brand/wordmark.png' },
+    { name: 'Pandas', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg' },
+    { name: 'Matplotlib', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Created_with_Matplotlib-logo.svg' },
+    { name: 'TensorFlow', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' }
   ];
 
   const tools = [
-    { name: 'Supabase', icon: '🗃️' },
-    { name: 'PostgreSQL', icon: '🐘' },
-    { name: 'MongoDB', icon: '🍃' },
-    { name: 'AWS', icon: '☁️' },
-    { name: 'Azure', icon: '🔵' },
-    { name: 'GCP', icon: '🌩️' },
-    { name: 'Docker', icon: '🐳' },
-    { name: 'Tailwind', icon: '💨' },
-    { name: 'Bootstrap', icon: '🅱️' },
-    { name: 'Figma', icon: '🎯' },
-    { name: 'Git', icon: '🌿' }
+    { name: 'Supabase', logo: 'https://supabase.com/brand-assets/supabase-logo-icon.png' },
+    { name: 'PostgreSQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+    { name: 'MongoDB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+    { name: 'AWS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg' },
+    { name: 'Azure', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg' },
+    { name: 'GCP', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg' },
+    { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+    { name: 'Tailwind', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg' },
+    { name: 'Bootstrap', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' },
+    { name: 'Figma', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+    { name: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' }
   ];
 
-  const SkillBar = ({ items, title }: { items: { name: string, icon: string }[], title: string }) => (
+  const SkillBar = ({ items, title }: { items: { name: string, logo: string }[], title: string }) => (
     <div className="mb-8">
       <h4 className="text-lg font-semibold text-gray-800 mb-4">{title}</h4>
       <div className="relative overflow-hidden bg-white rounded-lg shadow-sm p-4">
         <div className="flex animate-scroll-infinite space-x-8">
           {[...items, ...items].map((item, index) => (
             <div key={`${item.name}-${index}`} className="flex-shrink-0 flex items-center space-x-3 px-4 py-2 bg-gray-50 rounded-lg">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-lg">
-                  {item.icon}
-                </span>
+              <div className="w-8 h-8 flex items-center justify-center">
+                <img 
+                  src={item.logo} 
+                  alt={item.name} 
+                  className="w-6 h-6 object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                  }}
+                />
               </div>
               <span className="text-gray-700 font-medium whitespace-nowrap">{item.name}</span>
             </div>
@@ -102,7 +108,7 @@ export default function About() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 About Me
               </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-6"></div>
+              <div className="w-20 h-1 bg-blue-600 rounded-full mb-6"></div>
             </div>
 
             <div className={`${isVisible ? 'animate-fade-in-up stagger-1' : 'opacity-0'}`}>
@@ -137,7 +143,7 @@ export default function About() {
 
           {/* Profile Image */}
           <div className={`${isVisible ? 'animate-fade-in-up stagger-1' : 'opacity-0'} flex justify-center`}>
-            <div className="w-64 h-64 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 p-1">
+            <div className="w-64 h-64 rounded-full bg-blue-600 p-1">
               <img 
                 src="/sahil_headshot.png" 
                 alt="Sahil Alamgir" 
