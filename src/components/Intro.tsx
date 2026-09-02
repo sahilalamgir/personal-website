@@ -11,7 +11,7 @@ export function Intro() {
         {"University of Waterloo and BBA @"}
         <InlineLogo src="/logos/laurier.png" alt="Wilfrid Laurier University" />
         {
-          "Wilfrid Laurier University. I build full-stack software at startup and enterprise scale, most recently as a Software Engineer at Faire."
+          "Wilfrid Laurier University. I build full stack software at startup and enterprise scale, most recently as a Software Engineer at Faire."
         }
       </p>
     </div>
