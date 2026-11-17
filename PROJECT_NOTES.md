@@ -41,12 +41,10 @@ wider than content → content visually left-of-center). Any new page should
 render inside this shell (just add a route under `src/app/`) rather than
 reintroducing its own full-width/independently-centered wrapper.
 
-**Forward-looking gotcha:** `ProjectGrid` (a 2-column card grid, meant for
-when `SHOW_PROJECTS` flips on) will look cramped inside a `max-w-md`
-container. When that's turned on, widen the shell's `max-w-md` — but do it
-per-route (e.g. via a route-level layout for `/projects`, or a prop), not by
-widening the shared root layout, or the About page's centering bug above
-comes right back.
+**Projects grid width:** `ProjectGrid` is a compact 2-column grid of small
+tiles and fits inside the shared shell as-is (`max-w-lg`). If tiles ever need
+to be bigger, widen per-route (route-level layout or prop), not the shared
+root layout, or the About page's centering bug above comes back.
 
 Design language: dark grey background (not pure black), one serif font
 (Source Serif 4) for everything, minimalistic spacing, `react-icons` for all
@@ -72,21 +70,24 @@ data file, applied as a `box-shadow` in `EntryItem.tsx`). Optional
 is dimmed to `"38"` because a near-white glow reads brighter than colored
 ones at the same alpha.
 
-## The `SHOW_PROJECTS` toggle (`src/config.ts`)
+## Projects: tiles + modal
 
-```ts
-export const SHOW_PROJECTS = false;
-```
+`/projects` renders `ProjectGrid` (client component): small image tiles
+(`ProjectCard`, title + one-line tagline underneath). Clicking one opens
+`ProjectModal` (native `<dialog>`: Esc / backdrop / X to close) with overview,
+highlights, tech pills and GitHub / "Visit" links. Content lives in
+`src/data/projects.ts` (`Project` type in `types.ts`). Screenshots go in
+`public/logos/<name>.png` (the `image` field in the data file holds the path);
+if a file is missing `ProjectImage` shows a placeholder tinted with the
+project's `accent` color.
 
-Only affects `/projects`: `false` renders `ProjectsUnderConstruction`, `true`
-renders the real `ProjectGrid`/`ProjectCard` grid (fully built, just gated).
-Flip it once `src/data/projects.ts` has real content/images.
+`SHOW_PROJECTS` in `src/config.ts` is now `true`. Setting it to `false`
+swaps `/projects` back to the `ProjectsUnderConstruction` placeholder.
 
 ## Known pending items (things the user still needs to do, not bugs)
 
-- `src/data/projects.ts` has placeholder descriptions and image paths under
-  `public/projects/` that don't exist yet — only matters once `SHOW_PROJECTS`
-  is flipped on.
+- Descriptions for GenSheets, StoryBolt, AlzGuard, NoorPad, LearnETF,
+  Snapify and EchoDoc were drafted from the repos, not the resume. Verify them.
 - Contact links in `src/data/profile.ts` (GitHub/X/LinkedIn/email) should be
   double-checked against the user's real handles.
 

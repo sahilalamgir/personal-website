@@ -15,6 +15,7 @@ export function EntryList({ heading, entries }: { heading: string; entries: Role
             logoSrc={entry.logoSrc}
             glowColor={entry.glowColor}
             glowAlpha={entry.glowAlpha}
+            logoBg={entry.logoBg}
           />
         ))}
       </div>

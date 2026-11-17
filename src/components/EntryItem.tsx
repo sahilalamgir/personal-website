@@ -9,16 +9,20 @@ type EntryItemProps = {
   logoSrc: string;
   glowColor: string;
   glowAlpha?: string;
+  logoBg?: string;
 };
 
-export function EntryItem({ title, subtitle, period, logoSrc, glowColor, glowAlpha }: EntryItemProps) {
+export function EntryItem({ title, subtitle, period, logoSrc, glowColor, glowAlpha, logoBg }: EntryItemProps) {
   const [imgFailed, setImgFailed] = useState(false);
 
   return (
     <div className="flex items-center gap-3">
       <div
         className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-neutral-800"
-        style={{ boxShadow: `0 0 16px 2px ${glowColor}${glowAlpha ?? "66"}` }}
+        style={{
+          boxShadow: `0 0 16px 2px ${glowColor}${glowAlpha ?? "66"}`,
+          ...(logoBg && { backgroundColor: logoBg }),
+        }}
       >
         {imgFailed ? (
           <span className="text-sm font-medium text-neutral-300">{title.charAt(0)}</span>
@@ -27,7 +31,7 @@ export function EntryItem({ title, subtitle, period, logoSrc, glowColor, glowAlp
           <img
             src={logoSrc}
             alt={`${title} logo`}
-            className="h-full w-full object-cover"
+            className={logoBg ? "h-full w-full object-contain p-1.5" : "h-full w-full object-cover"}
             onError={() => setImgFailed(true)}
           />
         )}

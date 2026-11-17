@@ -17,3 +17,24 @@ body {
   color: var(--foreground);
   font-family: var(--font-source-serif), Georgia, serif;
 }
+
+.project-modal[open] {
+  animation: modal-in 180ms ease-out;
+}
+
+.project-modal[open]::backdrop {
+  animation: modal-fade 180ms ease-out;
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}
+
+@keyframes modal-fade {
+  from {
+    opacity: 0;
+  }
+}
